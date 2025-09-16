@@ -1,4 +1,4 @@
-import React,{useState, useEffect, useMemo,useRef}  from 'react';
+import React,{useState, useEffect, useMemo,useRef, use}  from 'react';
 import { View, Text, StyleSheet ,TouchableOpacity,TextInput} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -24,7 +24,6 @@ if(nomeStorage !== null){
 }
 
 getStorage();
-getStorage();
 
 
 },[]);
@@ -41,6 +40,8 @@ getStorage();
  },[nome])
 
           
+  
+
 
 
   function alteraNome(){

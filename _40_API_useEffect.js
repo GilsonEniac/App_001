@@ -1,11 +1,11 @@
-import React,{useState, useEffect, useMemo}  from 'react';
+import React,{useState, useEffect}  from 'react';
 import { View, Text, StyleSheet ,TouchableOpacity,TextInput} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { updateLanguageServiceSourceFile } from 'typescript';
 
 
 
-
-export default function _39_API_useState(){
+export default function _40_API_useState(){
 
 const [nome, setNome] = useState('');
 const [input, setInput] = useState('');
@@ -22,7 +22,6 @@ if(nomeStorage !== null){
 
 }
 
-getStorage();
 getStorage();
 
 
@@ -49,15 +48,9 @@ getStorage();
     }
 
 
- const letraNome = useMemo(()=>{
-  console.log('Mudou  letra')
-  return nome.length;
- },[nome])
-
-
  return(
   <View style={myStyles.conteiner}>
-<Text style={{fontSize: 30, fontWeight: 'bold', textAlign:"center", color: 'green'}}> useMemo</Text>
+<Text style={{fontSize: 30, fontWeight: 'bold', textAlign:"center", color: 'green'}}> useEFFECT</Text>
     <TextInput
     style={myStyles.input}
     placeholder='Digite seu nome'
@@ -71,9 +64,6 @@ getStorage();
 
     <Text style={myStyles.texto}>
       Olá {nome}!
-    </Text>
-    <Text style={myStyles.texto}>
-      Tem {letraNome} letras
     </Text>
   </View>
 
