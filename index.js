@@ -3,7 +3,7 @@
  */
 
 import { AppRegistry } from 'react-native';
-import App from './_43_Requisicoes_HTTP';
+import App from './_45_Criando_Loading';
 import { name as appName } from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);

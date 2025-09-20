@@ -1,30 +1,39 @@
 
 import React,{useEffect,useState} from "react";
-import {View,Text,StyleSheet,FlatList} from "react-native";
+import {View,Text,StyleSheet,FlatList, ActivityIndicator} from "react-native";
 
 import api from './src/services/api'
-import Filmes from './src/Filmes/'
+import Filmes from './src/Filmes'
 
-export default function _43_Requisicoes_HTTP(){
+export default function _45_Criando_Loading(){
 
   const [filmes, setFilmes] = useState([]);
+  const [loading, setLoading] =useState(true);
 
 
   useEffect(()=>{
     async function loadFilmes(){
-      const resposta =await api.get('r-api/?api=filmes')
+      const resposta =await api.get('r-api/?api=filmes');
       //console.log(response.data)
 
       setFilmes(resposta.data);
-
-
+      setLoading(false);
     }
+
      loadFilmes();
     
   },[]);
 
-
-return(
+  if(loading){
+    return(
+      <View style={{alignItems: 'center', justifyContent: 'center', flex:1}}>
+      <ActivityIndicator color= '#121212' size={100}
+      />
+      <Text style={{marginTop: -60}}>Gilson</Text>
+      </View>
+    )
+  }else{
+    return(
     <View style={myStyles.conteiner}>
 
         <FlatList
@@ -37,6 +46,10 @@ return(
     </View>
 
 );
+  }
+
+
+
 
 
 
