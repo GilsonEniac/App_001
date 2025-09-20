@@ -1,9 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState} from ' react';
 import {View,Text,StyleSheet,Image, TouchableOpacity, Modal} from 'react-native';
 
 import Detalhes from '../Detalhes';
 
 //export default function Filmes(props){ posso receber atraves da propriedades o "dados" aqui tenho que usara props.dados.nome exemplo
+//neste caso quando usa PORPS vem todas as proriedade
 export default function Filmes({dados}){ // posso desconstruir trazendo diretamente o dados assim não preciso usara props.dados.nome
    
 const [visibleModal, setVibleModal] = useState(false)   

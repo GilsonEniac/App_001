@@ -22,12 +22,12 @@ export default function _45_Criando_Loading(){
 
      loadFilmes();
     
-  },[]);
+  },[]); 
 
   if(loading){
     return(
       <View style={{alignItems: 'center', justifyContent: 'center', flex:1}}>
-      <ActivityIndicator color= '#121212' size={100}
+      <ActivityIndicator color= '#21ee0eff' size={100}
       />
       <Text style={{marginTop: -60}}>Gilson</Text>
       </View>
